@@ -1,0 +1,155 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY (UNIVERSE THEME) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    background: radial-gradient(circle at top, #0b0f2a, #000);
+}
+
+/* STARS */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* SECTION */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00f2ff;
+    box-shadow: 0 0 20px #00f2ff;
+}
+
+/* TEXT */
+.profile h1 {
+    font-size: 32px;
+}
+
+.profile p {
+    color: #ccc;
+}
+
+/* SOCIAL */
+.social a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 15px;
+    border: 1px solid #00f2ff;
+    border-radius: 20px;
+    color: #00f2ff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    background: #00f2ff;
+    color: black;
+}
+
+/* PRODUCTS */
+.products {
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.product-card {
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f2ff;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card span {
+    display: block;
+    margin: 10px 0;
+    color: #00f2ff;
+}
+
+/* BUTTON */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00f2ff, #8a2be2);
+    color: white;
+    cursor: pointer;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+input, textarea {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* WHATSAPP FLOAT */
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+}
