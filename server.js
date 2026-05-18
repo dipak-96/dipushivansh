@@ -3,19 +3,17 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.json());
+// root files serve
+app.use(express.static(__dirname));
 
-// 🔥 STATIC FIX
-app.use(express.static(path.join(__dirname, "public")));
-
-// 🔥 HOME ROUTE FIX
+// homepage
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// 🔥 TEST
+// test
 app.get("/test", (req, res) => {
-    res.send("Server is working 🔥");
+    res.send("Server working 🔥");
 });
 
 const PORT = process.env.PORT || 3000;
